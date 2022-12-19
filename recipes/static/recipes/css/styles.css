@@ -1,0 +1,9 @@
+
+h1 {
+    color: red;
+    font-size: 15px;
+    border: 1px solid red;
+}
+.grid_item{
+    background-color: aqua;
+}
