@@ -1,0 +1,22 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+    <title>RecipeApp | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'recipes/images/favicon.png' %}">
+    <!-- CSS CUSTOM -->
+    <link rel=”stylesheet” type="text/css" href="{% static 'recipes/css/style.css' %}">
+</head> 
+
+
+<h1>Recipes' list</h1>        {% comment%} HTML tag for heading  {% endcomment%}
+
+<div class="recipe_grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 2% 3%; margin: 2% 10% 6%;">
+   {% for object in object_list %} 
+   <div class="grid_item" style="border: 1px solid black; background-color: azure;">
+       <h4><a href ="{{object.get_absolute_url}}"> {{object.name}} </a></h4>
+       <img src="{{object.pic.url}}" />  
+    </div>
+   {% endfor %}
+</div>
