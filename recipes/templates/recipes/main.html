@@ -6,17 +6,31 @@
     {% load static %}
     <link rel="shortcut icon" href="{% static 'recipes/images/favicon.png' %}">
     <!-- CSS CUSTOM -->
-    <link rel=”stylesheet” type="text/css" href="{% static 'recipes/css/style.css' %}">
+    <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
+    <style type="text/css">
+    body{
+        background: url("{% static 'recipes/images/home_background.jpg' %}")  no-repeat fixed;
+        background-size: cover;
+    }</style>
 </head> 
 
+<body>
+    <div class="nav-bar">
+        <img id="logo" src="{% static 'recipes/images/logo.png' %}" width="150px">      {% comment%} HTML tag for heading  {% endcomment%}
+        <input id="search" type="text" placeholder="   Search for Ingredient">
+    </div>
 
-<h1>Recipes' list</h1>        {% comment%} HTML tag for heading  {% endcomment%}
-
-<div class="recipe_grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 2% 3%; margin: 2% 10% 6%;">
+<div class="recipe_grid">
    {% for object in object_list %} 
-   <div class="grid_item" style="border: 1px solid black; background-color: azure;">
-       <h4><a href ="{{object.get_absolute_url}}"> {{object.name}} </a></h4>
-       <img src="{{object.pic.url}}" />  
+   <div class="grid_item">
+       <h4><a class="recipe_name" href ="{{object.get_absolute_url}}"> {{object.name}} </a></h4>
+       <div style="margin-bottom: 10px;">
+        <b>Cooking Time: </b> {{object.cooking_time}} <br>
+        <b>Difficulty: </b> {{object.calculate_difficulty}} <br>
+       </div> 
+       <img class="food_images" src="{{object.pic.url}}" />  
     </div>
    {% endfor %}
 </div>
+</body>
+</html>
