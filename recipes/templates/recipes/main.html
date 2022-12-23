@@ -19,7 +19,9 @@
         <img id="logo" src="{% static 'recipes/images/logo.png' %}" width="150px">      {% comment%} HTML tag for heading  {% endcomment%}
         <div class="search_box">
             <input id="search" type="text" placeholder="   Search for Ingredient">
-            <a href ="{%url 'logout' %}" id="search_logo" > search </a>
+            <a href ="{%url 'logout' %}" id="search_logo" >
+                <img src="{% static 'recipes/images/search.png' %}" width="20">
+            </a>
         </div>
         <a href ="{%url 'logout' %}" class="logout_btn"> 
             Logout 
