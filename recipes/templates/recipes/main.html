@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html lang="en">  
 <head>
-    <title>RecipeApp | Home</title>
+    <title>RecipeApp | Recipes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% load static %}
     <link rel="shortcut icon" href="{% static 'recipes/images/favicon.png' %}">
@@ -17,7 +17,13 @@
 <body>
     <div class="nav-bar">
         <img id="logo" src="{% static 'recipes/images/logo.png' %}" width="150px">      {% comment%} HTML tag for heading  {% endcomment%}
-        <input id="search" type="text" placeholder="   Search for Ingredient">
+        <div class="search_box">
+            <input id="search" type="text" placeholder="   Search for Ingredient">
+            <a href ="{%url 'logout' %}" id="search_logo" > search </a>
+        </div>
+        <a href ="{%url 'logout' %}" class="logout_btn"> 
+            Logout 
+        </a>
     </div>
 
 <div class="recipe_grid">
