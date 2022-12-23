@@ -12,21 +12,36 @@
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search_box{
+    display: flex;
 }
 #search{
-    background-color:rgba(255, 255, 255, 0.5);
-    border: 1px solid black;
-    border-radius: 7px;
-    height: 40px;
-    margin: 12px 80px 12px 0;
-    width: 300px;
+    width: 270px;
+    height: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 0px;
+}
+#search_logo{
+    width: 55px;
+    height: 25px;
+    padding: 1px;
+    background-color: rgb(6, 74, 37);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: white;
 }
 
 #logo{
-    margin: 4px 0 4px 80px;
     border-radius: 3px;
 }
 .recipe_grid {
@@ -59,8 +74,22 @@
     text-decoration: none;
 }
 .recipe_name:hover{
-    color: rgb(132, 97, 11)
+    color: rgb(132, 97, 11);
+    transition: 200ms;
 }
+
+
+.auth_modal{
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 5px 10px 15px;
+    margin: 0 auto;
+    margin-top: 23vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .details_modal{
     width: 55%;
     background-color: rgba(255, 255, 255, 0.5);
@@ -76,4 +105,37 @@
 }
 .details_short, .details_long{
     padding: 8px;
+}
+#error_login{
+    margin: 0 auto;
+    border: 3px solid rgb(243, 0, 0);
+    background-color: rgb(245, 131, 131);
+    padding: 10px;
+    border-radius: 10px;
+}
+.form_input{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.login_btn, .logout_btn, .back-home_btn{
+    width: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background-color: rgb(132, 97, 11);
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.back-home_btn{
+    background-color: rgb(123, 49, 33);
+}
+.login_btn:hover, .logout_btn:hover, .back-home_btn:hover{
+    filter: brightness(125%);
+    transition: 200ms;
 }
