@@ -28,13 +28,12 @@
 .search_results{
     background-color: rgb(232, 211, 187);
     border-radius: 7px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 10px;
     width: 200px;
     padding: 20px;
     position: fixed;
     margin: 0 auto;
 }
+
 
 #logo{
     border-radius: 3px;
